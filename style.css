@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background: #14397b;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 800px;
+  border-radius: 32px;
+  margin: 16px;
+  background: #fff;
+  padding: 32px;
+  flex-grow: 1;
+  height: fit-content;
+}
+
+.form {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  border-radius: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-isComplete {
+  margin: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-edit {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-edit .btn {
+  flex-direction: row;
+}
+
+.form-edit input {
+  font-size: 1.5em;
+  padding: 6px;
+  margin: 0px 0;
+  border: 0px;
+}
+
+.checkbox {
+  background-color: #eee;
+  min-height: 36px;
+  flex-basis: 100px;
+}
+
+.checkbox:checked {
+  background-color: #14397b;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  font-size: 24px;
+  padding: 16px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  border: 2px solid #14397b;
+  border-radius: 12px;
+}
+
+.btn-submit {
+  border-radius: 16px;
+  padding: 12px 24px;
+  border: 2px solid #14397b;
+  color: black;
+  font-size: 16px;
+  margin: 16px 0;
+  align-self: center;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: #14397b;
+  color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.book-list {
+  padding: 16px;
+}
+
+.book-item {
+  margin: 10px 0;
+  border: 1px solid #14397b;
+  border-radius: 12px;
+  padding: 8px 16px 16px 16px;
+}
+
+.btn {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin: 0 5px;
+}
+
+.status-btn {
+  color: white;
+  background-color: green;
+}
+
+.del-btn {
+  color: white;
+  background-color: red;
+}
+
+.edit-btn {
+  color: white;
+  background-color: #14397b;
+}
