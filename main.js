@@ -80,7 +80,7 @@ function makeBook(bookObject) {
   bookYear.innerText = `Tahun: ${year}`;
 
   const bookContainer = document.createElement("div");
-  bookContainer.setAttribute("data-id", id);
+  bookContainer.setAttribute("data-bookid", id);
   bookContainer.setAttribute("data-testid", "bookItem");
   bookContainer.setAttribute("class", "book-item");
   bookContainer.append(bookTitle, bookAuthor, bookYear);
@@ -129,7 +129,7 @@ function makeBook(bookObject) {
 function addBook() {
   const title = document.getElementById("bookFormTitle").value;
   const author = document.getElementById("bookFormAuthor").value;
-  const year = document.getElementById("bookFormYear").value;
+  const year = parseInt(document.getElementById("bookFormYear").value);
   const isComplete = document.getElementById("bookFormIsComplete").checked;
 
   const id = generateId();
@@ -138,6 +138,7 @@ function addBook() {
 
   document.dispatchEvent(new Event(RENDER_EVENT));
   saveBook();
+  console.log(bookObject);
 }
 
 function addBookToComplete(id) {
@@ -175,16 +176,19 @@ function editBook(id) {
 
   if (bookObject == null) return;
 
-  const bookContainer = document.querySelector(`div[data-id="${id}"]`);
+  const bookContainer = document.querySelector(`div[data-bookid="${id}"]`);
   bookContainer.style.display = "none";
 
   const editForm = document.createElement("form");
   editForm.setAttribute("class", "form-edit book-item");
   const titleEdit = document.createElement("input");
+  titleEdit.setAttribute("type", "text");
   titleEdit.value = bookObject.title;
   const authorEdit = document.createElement("input");
+  authorEdit.setAttribute("type", "text");
   authorEdit.value = bookObject.author;
   const yearEdit = document.createElement("input");
+  yearEdit.setAttribute("type", "number");
   yearEdit.value = bookObject.year;
 
   const saveButton = document.createElement("button");
